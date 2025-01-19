@@ -1,0 +1,20 @@
+  <div class="edit">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="inserir-fotografia"> 
+            <h3>INSIRA UMA FOTOGRAFIA</h3>
+            <input type="text" name="nomeImagem" placeholder="Nome da Imagem" required>
+            <input type="file" name="imagem" accept="image/*" required>
+            <input type="submit" value="Upload">
+        </div>
+
+       
+    </form>
+
+    <form action="/delete" method="post">
+       <div class="deletar-fotografia">
+            <h3>DELETE UMA FOTOGRAFIA</h3>
+            <input type="text" name="nome" placeholder="Nome da Imagem " required>
+            <input type="submit" value="Deletar ">
+        </div>
+    </form>
+</div>
