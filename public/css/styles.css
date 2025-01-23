@@ -180,7 +180,7 @@ a h3:hover {
 }
 
 .fotografias img {
-    width: 350px;
+    width: 420px;
     background-size: cover;
     max-width: calc(90.90% - 2px);
     min-width: auto;
@@ -258,6 +258,10 @@ footer {
     line-height: 50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+footer p {
+    line-height: 50px;
 }
 
 
