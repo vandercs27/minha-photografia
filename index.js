@@ -1,11 +1,17 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const app = express()
-const port = 3000
+const port = process.env.port || 3000
 const mysql = require('mysql2')
 const path = require('path')
 const multer = require('multer')
 const session = require( 'express-session')
+const fs = require('fs');
+const uploadDir = path.join(__dirname, 'upload');
+
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir);
+}
 
 // configuracao do multer para armazenar arquivo em memoria
 const storage = multer.diskStorage({
@@ -28,12 +34,7 @@ app.set('view engine', 'handlebars')
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(express.static('public'))
-app.use(session({
-    secret: 'Vander@cs27',  // senha forte
-    resave: false,
-    saveUninitialized: false,
-    cookie: {maxAge: 60 * 60 *1000} // 1 hora de sessao
-}))
+
 
 
 
@@ -64,13 +65,6 @@ app.get('/conceitual', (req, res) => {
     res.render('conceitual')
 })
 
-
-
-app.get('full-image', (req, res) => {
-    const foto = req.body.img 
-
-    res.render('full-image')
-})
 
 app.get('/sobre', (req, res) => {
     res.render('sobre')
