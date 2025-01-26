@@ -2,10 +2,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const app = express()
 const port = process.env.port || 3000
-const mysql = require('mysql2')
 const path = require('path')
-const multer = require('multer')
-const session = require( 'express-session')
 const fs = require('fs');
 const uploadDir = path.join(__dirname, 'upload');
 
