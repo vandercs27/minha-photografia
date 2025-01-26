@@ -1,8 +1,16 @@
 {
  
   "routes": [
-    { "src": "/(.*)", "dest": "index.js" }
+    { "src": "/(.*)", "dest": "index.js" },
+    {
+      "buildCommand": "npm run build",
+      "outputDirectory": "dist",
+      "framework": null
+    }
   ]
 }
+
+
+
 
   
