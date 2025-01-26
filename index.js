@@ -37,7 +37,9 @@ app.use(express.static('public'))
 
 
 
-
+app.get("/", (req, res) => {
+    res.render("home")
+})
 app.get('/galeria', (req, res) => {
     
     res.render('galeria')
