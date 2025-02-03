@@ -75,7 +75,7 @@ app.get('/sobre', (req, res) => {
 })
 
 
-
+module.exports = app;
 
 
 app.listen(port, () => {
