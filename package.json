@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-   
-    "postinstall": "npm install",
-    "build": "echo 'No build step required for this project.'",
-    "start": "NODE_ENV=production node index.js"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "echo 'No build step required for this project.'",
+  "vercel-build": "npm run build",
+  "start": "NODE_ENV=production node index.js"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
